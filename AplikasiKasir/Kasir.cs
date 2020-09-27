@@ -31,8 +31,6 @@ namespace AplikasiKasir
             
         public void simpanData()
         {
-            #region input data_pembelian
-
             /**
              * Memuat invoice, nama kasir, diskon pembelian, dan total harga ke dalam tabel data_pembelian
              */
@@ -61,9 +59,6 @@ namespace AplikasiKasir
             cmd.Parameters.AddWithValue("@total", totalHarga);
             cmd.ExecuteNonQuery();
 
-            #endregion
-            #region input detail_pembelian
-
             /**
              * Loop semua data di detailPembelian sambil dimasukan ke dalam tabel detail_pembelian(invoice, kode barang,
              * harga barang, jumlah barang, diskon barang)
@@ -81,43 +76,17 @@ namespace AplikasiKasir
                 cmd.Parameters.AddWithValue("@diskon", detailProduk[i][4]);
                 cmd.ExecuteNonQuery();
             }
-            #endregion
-            #region proses transaksi baru
+
+            /*
+             * Mempersiapkan form untuk pembelian berikutnya
+             */
+
             detailProduk.Clear();
             dataGridView1.Rows.Clear();
             lTotal.Text = "0";
             tKode.Focus();
-# endregion
+
             con.Close();
-        }
-
-        private void invoice()
-        {
-            int invoice;
-
-            MySqlConnection con = Koneksi.koneksi();
-            MySqlCommand cmd = new MySqlCommand("SELECT COUNT(*) FROM data_pembelian WHERE invoice LIKE 'Invoice" +
-                DateTime.Now.ToString("y''MM''dd") + "%'", con);
-            MySqlDataReader read = cmd.ExecuteReader();
-
-            if (read.HasRows)
-            {
-                read.Read();
-                invoice = Convert.ToInt32(read["COUNT(*)"]);
-            }
-            else
-                invoice = 0;
-
-            string jAngka = Convert.ToString(invoice + 1);
-            int angka = 4 - Convert.ToInt32(jAngka.Count());
-            string idInvoice = "" + jAngka;
-
-            for (int i = 0; i < angka; i++)
-                idInvoice = idInvoice.Insert(0, "0");
-
-            string invoices = DateTime.Now.ToString("y''MM''dd") + idInvoice;
-
-            lInvoice.Text = "Invoice" + invoices;
         }
 
         private void keyDown(object sender, PreviewKeyDownEventArgs e)
@@ -128,6 +97,8 @@ namespace AplikasiKasir
                 button2_Click(sender, e);
             if (e.KeyCode == Keys.F3)
                 button4_Click(sender, e);
+            if (e.KeyCode == Keys.Enter)
+                button3_Click(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e) { Logout(mn); }
@@ -196,6 +167,11 @@ namespace AplikasiKasir
         {
             Pembayaran pb = new Pembayaran(this, ltotal);
             pb.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

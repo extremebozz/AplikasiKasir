@@ -74,24 +74,26 @@
             // bBayar
             // 
             this.bBayar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBayar.Location = new System.Drawing.Point(100, 286);
+            this.bBayar.Location = new System.Drawing.Point(293, 288);
             this.bBayar.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
             this.bBayar.Name = "bBayar";
             this.bBayar.Size = new System.Drawing.Size(150, 50);
             this.bBayar.TabIndex = 1;
             this.bBayar.Text = "Bayar ( Enter )";
             this.bBayar.UseVisualStyleBackColor = true;
+            this.bBayar.Click += new System.EventHandler(this.bBayar_Click);
             // 
             // bKembali
             // 
             this.bKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bKembali.Location = new System.Drawing.Point(293, 286);
+            this.bKembali.Location = new System.Drawing.Point(105, 288);
             this.bKembali.Margin = new System.Windows.Forms.Padding(40, 30, 3, 3);
             this.bKembali.Name = "bKembali";
             this.bKembali.Size = new System.Drawing.Size(150, 50);
-            this.bKembali.TabIndex = 1;
+            this.bKembali.TabIndex = 2;
             this.bKembali.Text = "Kembali ( Esc )";
             this.bKembali.UseVisualStyleBackColor = true;
+            this.bKembali.Click += new System.EventHandler(this.bKembali_Click);
             // 
             // lTotalHargaBelanja
             // 
@@ -116,7 +118,7 @@
             this.lKembali.Name = "lKembali";
             this.lKembali.Size = new System.Drawing.Size(401, 30);
             this.lKembali.TabIndex = 2;
-            this.lKembali.Text = "label4";
+            this.lKembali.Text = "0";
             this.lKembali.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tBayar
@@ -127,9 +129,10 @@
             this.tBayar.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.tBayar.Name = "tBayar";
             this.tBayar.Size = new System.Drawing.Size(401, 26);
-            this.tBayar.TabIndex = 3;
+            this.tBayar.TabIndex = 0;
             this.tBayar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tBayar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tBayar_KeyUp);
+            this.tBayar.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
             // Pembayaran
             // 

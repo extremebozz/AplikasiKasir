@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pKanan = new System.Windows.Forms.Panel();
             this.nudDiskon = new System.Windows.Forms.NumericUpDown();
             this.nudQty = new System.Windows.Forms.NumericUpDown();
@@ -47,16 +47,17 @@
             this.lInvoice = new System.Windows.Forms.Label();
             this.pBawah = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pKanan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiskon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
@@ -121,7 +122,7 @@
             this.button3.Location = new System.Drawing.Point(95, 396);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(240, 50);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Tambah";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -145,7 +146,7 @@
             this.label3.Location = new System.Drawing.Point(50, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 29);
-            this.label3.TabIndex = 1;
+            this.label3.TabIndex = 99;
             this.label3.Text = "Diskon ( % )";
             // 
             // label2
@@ -156,7 +157,7 @@
             this.label2.Location = new System.Drawing.Point(50, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 29);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 99;
             this.label2.Text = "Qty";
             // 
             // label1
@@ -167,7 +168,7 @@
             this.label1.Location = new System.Drawing.Point(50, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 29);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 99;
             this.label1.Text = "Barcode / Kode";
             // 
             // lNamaKasir
@@ -178,7 +179,7 @@
             this.lNamaKasir.Name = "lNamaKasir";
             this.lNamaKasir.Padding = new System.Windows.Forms.Padding(35, 35, 0, 0);
             this.lNamaKasir.Size = new System.Drawing.Size(425, 70);
-            this.lNamaKasir.TabIndex = 0;
+            this.lNamaKasir.TabIndex = 99;
             this.lNamaKasir.Text = "label1";
             // 
             // pAtas
@@ -212,7 +213,7 @@
             this.lTotal.Name = "lTotal";
             this.lTotal.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lTotal.Size = new System.Drawing.Size(699, 70);
-            this.lTotal.TabIndex = 2;
+            this.lTotal.TabIndex = 99;
             this.lTotal.Text = "0";
             this.lTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -224,7 +225,7 @@
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(30, 10, 0, 0);
             this.label4.Size = new System.Drawing.Size(699, 30);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 99;
             this.label4.Text = "Total";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -237,7 +238,7 @@
             this.lInvoice.Name = "lInvoice";
             this.lInvoice.Padding = new System.Windows.Forms.Padding(30, 15, 0, 0);
             this.lInvoice.Size = new System.Drawing.Size(699, 40);
-            this.lInvoice.TabIndex = 4;
+            this.lInvoice.TabIndex = 99;
             this.lInvoice.Text = "Pembelian";
             // 
             // pBawah
@@ -260,14 +261,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -280,64 +281,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(699, 231);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.TabIndex = 99;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(1094, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 50);
-            this.button1.TabIndex = 6;
-            this.button1.TabStop = false;
-            this.button1.Text = "Logout\n( F12 )";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
-            // 
-            // pMenu
-            // 
-            this.pMenu.Controls.Add(this.button4);
-            this.pMenu.Controls.Add(this.button2);
-            this.pMenu.Controls.Add(this.button1);
-            this.pMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pMenu.Location = new System.Drawing.Point(0, 491);
-            this.pMenu.Name = "pMenu";
-            this.pMenu.Padding = new System.Windows.Forms.Padding(10);
-            this.pMenu.Size = new System.Drawing.Size(1184, 70);
-            this.pMenu.TabIndex = 6;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(110, 10);
-            this.button4.Margin = new System.Windows.Forms.Padding(10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 50);
-            this.button4.TabIndex = 7;
-            this.button4.TabStop = false;
-            this.button4.Text = "Pembayaran\r\n( F3 )";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            this.button4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(10, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 50);
-            this.button2.TabIndex = 7;
-            this.button2.TabStop = false;
-            this.button2.Text = "Pencarian\r\n( F2 )";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
             // Column1
             // 
@@ -354,8 +300,8 @@
             // 
             // Column3
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column3.HeaderText = "Harga";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -376,11 +322,94 @@
             // 
             // Column6
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column6.HeaderText = "Total";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1094, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 50);
+            this.button1.TabIndex = 6;
+            this.button1.TabStop = false;
+            this.button1.Text = "Logout\n( F12 )";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            // 
+            // pMenu
+            // 
+            this.pMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pMenu.Controls.Add(this.button4);
+            this.pMenu.Controls.Add(this.button5);
+            this.pMenu.Controls.Add(this.button2);
+            this.pMenu.Controls.Add(this.button1);
+            this.pMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pMenu.Location = new System.Drawing.Point(0, 491);
+            this.pMenu.Name = "pMenu";
+            this.pMenu.Padding = new System.Windows.Forms.Padding(20, 10, 10, 10);
+            this.pMenu.Size = new System.Drawing.Size(1184, 70);
+            this.pMenu.TabIndex = 6;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(220, 10);
+            this.button4.Margin = new System.Windows.Forms.Padding(10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 50);
+            this.button4.TabIndex = 7;
+            this.button4.TabStop = false;
+            this.button4.Text = "Pembayaran\r\n( F3 )";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(120, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(10);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 50);
+            this.button2.TabIndex = 7;
+            this.button2.TabStop = false;
+            this.button2.Text = "Pencarian\r\n( F2 )";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(20, 10);
+            this.button5.Margin = new System.Windows.Forms.Padding(10);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 50);
+            this.button5.TabIndex = 7;
+            this.button5.TabStop = false;
+            this.button5.Text = "Transaksi Baru\r\n( F1 )";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
             // Kasir
             // 
@@ -435,5 +464,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button button5;
     }
 }

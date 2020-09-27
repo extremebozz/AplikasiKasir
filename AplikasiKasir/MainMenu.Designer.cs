@@ -37,7 +37,7 @@
             this.pChild.Location = new System.Drawing.Point(0, 0);
             this.pChild.Name = "pChild";
             this.pChild.Size = new System.Drawing.Size(800, 450);
-            this.pChild.TabIndex = 0;
+            this.pChild.TabIndex = 99;
             // 
             // MainMenu
             // 

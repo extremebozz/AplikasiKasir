@@ -15,7 +15,7 @@ namespace AplikasiKasir
     public partial class Pembayaran : Form
     {
         Kasir kasir;
-        long totalBelanja;
+        long totalBelanja, bayar;
         CultureInfo idID = CultureInfo.CreateSpecificCulture("id-ID");
 
         public Pembayaran(Kasir ks, int total)
@@ -24,16 +24,47 @@ namespace AplikasiKasir
             kasir = ks;
             totalBelanja = total;
             lTotalHargaBelanja.Text = string.Format(idID, "{0:#,##0}", totalBelanja);
+            tBayar.Focus();
+        }
+
+        private void keyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    Close();
+                    break;
+
+                case Keys.Enter:
+                    bBayar_Click(sender, e);
+                    break;
+            }
         }
 
         private void tBayar_KeyUp(object sender, KeyEventArgs e)
-        {
+        {            
             try
             {
+                bayar = Convert.ToInt64(Regex.Replace(tBayar.Text, @"[\W+\.~]", ""));
                 int posisiKursor = tBayar.SelectionStart;
-                tBayar.Text = string.Format(idID, "{0:#,##0}", Convert.ToInt64(Regex.Replace(tBayar.Text, @"[\W+\.~]", "")));
+                tBayar.Text = string.Format(idID, "{0:#,##0}", bayar);
                 tBayar.SelectionStart = posisiKursor;
+                lKembali.Text = string.Format(idID, "{0:#,##0}", (bayar - totalBelanja));
             } catch { }
+        }
+
+        private void bKembali_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bBayar_Click(object sender, EventArgs e)
+        {
+            if (bayar >= totalBelanja)
+            {
+                kasir.simpanData();
+                Close();
+            }
         }
     }
 }
