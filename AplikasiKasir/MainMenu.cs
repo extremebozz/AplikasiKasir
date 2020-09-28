@@ -17,7 +17,8 @@ namespace AplikasiKasir
         public MainMenu()
         {
             InitializeComponent();
-            //this.MaximizeBox = false;
+            //MaximizeBox = false;
+            MinimizeBox = false;
             cekSession();
             this.BringToFront();
         }

@@ -45,10 +45,12 @@ namespace AplikasiKasir
         {            
             try
             {
-                bayar = Convert.ToInt64(Regex.Replace(tBayar.Text, @"[\W+\.~]", ""));
+                int posisiLama = tBayar.Text.Length;
                 int posisiKursor = tBayar.SelectionStart;
+                bayar = Convert.ToInt64(Regex.Replace(tBayar.Text, @"[\W+\.~]", ""));
                 tBayar.Text = string.Format(idID, "{0:#,##0}", bayar);
-                tBayar.SelectionStart = posisiKursor;
+                int posisiBaru = tBayar.Text.Length;
+                tBayar.SelectionStart = posisiBaru - posisiLama + posisiKursor;
                 lKembali.Text = string.Format(idID, "{0:#,##0}", (bayar - totalBelanja));
             } catch { }
         }
