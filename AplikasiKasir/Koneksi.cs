@@ -29,7 +29,7 @@ namespace AplikasiKasir
             }
             catch
             {
-                MessageBox.Show("Periksa Kembali Database Anda!", "Error");
+                MessageBox.Show("Periksa Kembali Database Anda!", "Error", MessageBoxButtons.OK , MessageBoxIcon.Stop);
             }
                 
             return berhasil;

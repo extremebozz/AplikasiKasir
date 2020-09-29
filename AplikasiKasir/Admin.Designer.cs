@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pMenu = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pStat = new System.Windows.Forms.Panel();
-            this.pChild = new System.Windows.Forms.Panel();
-            this.lUser = new System.Windows.Forms.Label();
             this.lJam = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.lUser = new System.Windows.Forms.Label();
+            this.pChild = new System.Windows.Forms.Panel();
             this.pMenu.SuspendLayout();
             this.pStat.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +54,45 @@
             this.pMenu.Location = new System.Drawing.Point(0, 0);
             this.pMenu.Name = "pMenu";
             this.pMenu.Padding = new System.Windows.Forms.Padding(15);
-            this.pMenu.Size = new System.Drawing.Size(834, 100);
+            this.pMenu.Size = new System.Drawing.Size(859, 100);
             this.pMenu.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button3.Location = new System.Drawing.Point(774, 15);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.button3.Size = new System.Drawing.Size(70, 70);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Logout\r\n( F12 )";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(243, 15);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.button5.Size = new System.Drawing.Size(70, 70);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Data Transaksi\r\n( F4 )";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(167, 15);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.button4.Size = new System.Drawing.Size(70, 70);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Data Produk\r\n( F3 )";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -88,31 +125,11 @@
             this.pStat.Controls.Add(this.lJam);
             this.pStat.Controls.Add(this.lUser);
             this.pStat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pStat.Location = new System.Drawing.Point(834, 0);
+            this.pStat.Location = new System.Drawing.Point(859, 0);
             this.pStat.Name = "pStat";
             this.pStat.Padding = new System.Windows.Forms.Padding(20);
-            this.pStat.Size = new System.Drawing.Size(350, 561);
+            this.pStat.Size = new System.Drawing.Size(325, 561);
             this.pStat.TabIndex = 2;
-            // 
-            // pChild
-            // 
-            this.pChild.BackColor = System.Drawing.Color.AliceBlue;
-            this.pChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pChild.Location = new System.Drawing.Point(0, 100);
-            this.pChild.Name = "pChild";
-            this.pChild.Size = new System.Drawing.Size(834, 461);
-            this.pChild.TabIndex = 3;
-            // 
-            // lUser
-            // 
-            this.lUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUser.Location = new System.Drawing.Point(20, 20);
-            this.lUser.Name = "lUser";
-            this.lUser.Size = new System.Drawing.Size(310, 40);
-            this.lUser.TabIndex = 0;
-            this.lUser.Text = "label1";
-            this.lUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lJam
             // 
@@ -120,47 +137,30 @@
             this.lJam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lJam.Location = new System.Drawing.Point(20, 60);
             this.lJam.Name = "lJam";
-            this.lJam.Size = new System.Drawing.Size(310, 40);
+            this.lJam.Size = new System.Drawing.Size(285, 40);
             this.lJam.TabIndex = 2;
             this.lJam.Text = "label3";
             this.lJam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button3
+            // lUser
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.Location = new System.Drawing.Point(749, 15);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Logout\r\n( F12 )";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.lUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lUser.Location = new System.Drawing.Point(20, 20);
+            this.lUser.Name = "lUser";
+            this.lUser.Size = new System.Drawing.Size(285, 40);
+            this.lUser.TabIndex = 0;
+            this.lUser.Text = "label1";
+            this.lUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button4
+            // pChild
             // 
-            this.button4.Location = new System.Drawing.Point(167, 15);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button4.Size = new System.Drawing.Size(70, 70);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Data Produk\r\n( F3 )";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(243, 15);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button5.Size = new System.Drawing.Size(70, 70);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Data Transaksi\r\n( F4 )";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button2_Click);
+            this.pChild.BackColor = System.Drawing.Color.AliceBlue;
+            this.pChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pChild.Location = new System.Drawing.Point(0, 100);
+            this.pChild.Name = "pChild";
+            this.pChild.Size = new System.Drawing.Size(859, 461);
+            this.pChild.TabIndex = 3;
             // 
             // Admin
             // 

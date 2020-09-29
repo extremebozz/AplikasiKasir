@@ -54,10 +54,15 @@ namespace AplikasiKasir
             childForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e) { menu.openChildForm(new Kasir(menu)); }        
+        private void button1_Click(object sender, EventArgs e) { openChildForm(new Kasir(menu)); }        
 
-        private void button2_Click(object sender, EventArgs e) { openChildForm(new DataUser(this)); }
+        private void button2_Click(object sender, EventArgs e) { openChildForm(new DataUser(menu)); }
 
         private void button3_Click(object sender, EventArgs e) { Logout(menu); }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

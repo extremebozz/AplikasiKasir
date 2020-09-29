@@ -34,8 +34,8 @@ namespace AplikasiKasir
             if (!tUsername.Text.Equals("") && !tPassword.Text.Equals(""))
             {
                 MySqlConnection con = Koneksi.koneksi();
-                MySqlCommand cmd = new MySqlCommand("SELECT nama_user, jabatan FROM data_user WHERE nama_user = '" + tUsername.Text +
-                    "'AND password = '" + tPassword.Text + "'", con);
+                MySqlCommand cmd = new MySqlCommand("SELECT nama_user, jabatan FROM data_user WHERE nama_user = BINARY '" +
+                    tUsername.Text + "'AND password = BINARY '" + tPassword.Text + "'", con);
                 MySqlDataReader read = cmd.ExecuteReader();
                 if (read.HasRows)
                 {
