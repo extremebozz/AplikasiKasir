@@ -55,6 +55,18 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataPembelian.Designer.cs">
+      <DependentUpon>DataPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataProduk.Designer.cs">
+      <DependentUpon>DataProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataProduk.resx">
+      <DependentUpon>DataProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataUser.resx">
       <DependentUpon>DataUser.cs</DependentUpon>

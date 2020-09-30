@@ -139,7 +139,7 @@ namespace AplikasiKasir
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > 0)
+            if (e.RowIndex >= 0)
             {
                 edit = true;
                 bHapus.Visible = true;

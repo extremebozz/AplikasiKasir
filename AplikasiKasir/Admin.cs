@@ -60,9 +60,6 @@ namespace AplikasiKasir
 
         private void button3_Click(object sender, EventArgs e) { Logout(menu); }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void button4_Click(object sender, EventArgs e) { openChildForm(new DataProduk()); }
     }
 }
