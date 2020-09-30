@@ -35,8 +35,10 @@ namespace AplikasiKasir
             t.Enabled = true;
         }
 
-        void t_Tick(object sender, EventArgs e) { lJam.Text = DateTime.Now.ToString("dd MMMM yyyy , ", idID) +
-                DateTime.Now.ToString("HH:mm:ss"); }            
+        void t_Tick(object sender, EventArgs e) 
+        { 
+            lJam.Text = DateTime.Now.ToString("dd MMMM yyyy , ", idID) + DateTime.Now.ToString("HH:mm:ss");
+        }            
 
         public void openChildForm(Form childForm)
         {
@@ -61,5 +63,7 @@ namespace AplikasiKasir
         private void button3_Click(object sender, EventArgs e) { Logout(menu); }
 
         private void button4_Click(object sender, EventArgs e) { openChildForm(new DataProduk()); }
+
+        private void button5_Click(object sender, EventArgs e) { openChildForm(new DataPembelian()); }
     }
 }

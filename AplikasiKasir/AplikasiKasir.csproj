@@ -73,6 +73,12 @@
     <Compile Include="DataUser.Designer.cs">
       <DependentUpon>DataUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetailPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailPembelian.Designer.cs">
+      <DependentUpon>DetailPembelian.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Kasir.cs">
       <SubType>Form</SubType>
@@ -110,11 +116,17 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataPembelian.resx">
+      <DependentUpon>DataPembelian.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataProduk.resx">
       <DependentUpon>DataProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataUser.resx">
       <DependentUpon>DataUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPembelian.resx">
+      <DependentUpon>DetailPembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kasir.resx">
       <DependentUpon>Kasir.cs</DependentUpon>
